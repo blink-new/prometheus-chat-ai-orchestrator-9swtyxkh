@@ -390,18 +390,18 @@ export default function TokenTracker({ currentUser }: TokenTrackerProps) {
                     { amount: 2500, price: 20, bonus: 500 },
                     { amount: 5000, price: 40, bonus: 1500 },
                     { amount: 10000, price: 75, bonus: 4000 }
-                  ].map((package) => (
+                  ].map((pkg) => (
                     <motion.div
-                      key={package.amount}
+                      key={pkg.amount}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="p-4 rounded-lg border border-border/50 hover:border-violet-500/50 cursor-pointer transition-colors text-center"
                     >
-                      <p className="font-medium text-lg">{package.amount.toLocaleString()} PPT</p>
-                      {package.bonus > 0 && (
-                        <p className="text-sm text-green-400">+{package.bonus} bonus</p>
+                      <p className="font-medium text-lg">{pkg.amount.toLocaleString()} PPT</p>
+                      {pkg.bonus > 0 && (
+                        <p className="text-sm text-green-400">+{pkg.bonus} bonus</p>
                       )}
-                      <p className="text-muted-foreground">${package.price}</p>
+                      <p className="text-muted-foreground">${pkg.price}</p>
                     </motion.div>
                   ))}
                 </div>
