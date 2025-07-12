@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@layer base {
+  :root {
+    --background: 250 45% 4%;
+    --foreground: 280 15% 95%;
+    --card: 252 45% 6%;
+    --card-foreground: 280 15% 95%;
+    --popover: 252 45% 6%;
+    --popover-foreground: 280 15% 95%;
+    --primary: 260 100% 65%;
+    --primary-foreground: 280 15% 5%;
+    --secondary: 252 45% 10%;
+    --secondary-foreground: 280 15% 85%;
+    --muted: 252 45% 8%;
+    --muted-foreground: 280 15% 65%;
+    --accent: 260 80% 55%;
+    --accent-foreground: 280 15% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 280 15% 95%;
+    --border: 252 45% 12%;
+    --input: 252 45% 8%;
+    --ring: 260 100% 65%;
+    --violet-50: 277 100% 98%;
+    --violet-100: 276 100% 96%;
+    --violet-200: 277 87% 91%;
+    --violet-300: 279 75% 85%;
+    --violet-400: 280 65% 78%;
+    --violet-500: 260 100% 65%;
+    --violet-600: 262 83% 58%;
+    --violet-700: 263 70% 50%;
+    --violet-800: 263 69% 42%;
+    --violet-900: 264 67% 35%;
+    --violet-950: 265 86% 20%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 250 45% 4%;
+    --foreground: 280 15% 95%;
+    --card: 252 45% 6%;
+    --card-foreground: 280 15% 95%;
+    --popover: 252 45% 6%;
+    --popover-foreground: 280 15% 95%;
+    --primary: 260 100% 65%;
+    --primary-foreground: 280 15% 5%;
+    --secondary: 252 45% 10%;
+    --secondary-foreground: 280 15% 85%;
+    --muted: 252 45% 8%;
+    --muted-foreground: 280 15% 65%;
+    --accent: 260 80% 55%;
+    --accent-foreground: 280 15% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 280 15% 95%;
+    --border: 252 45% 12%;
+    --input: 252 45% 8%;
+    --ring: 260 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/20 backdrop-blur-xl border border-border/50;
+  }
+  
+  .glass-strong {
+    @apply bg-card/40 backdrop-blur-xl border border-border/70;
+  }
+  
+  .violet-glow {
+    box-shadow: 0 0 20px hsl(var(--violet-500) / 0.3);
+  }
+  
+  .violet-glow-strong {
+    box-shadow: 0 0 30px hsl(var(--violet-500) / 0.5);
+  }
+}
